@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f5f2ea" />
+    <meta name="description" content="Esercizio di comprensione orale con otto domande Vero o Falso." />
+    <title>Comprensione orale – Vero o falso?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">ESERCIZIO DI ASCOLTO</p>
+        <h1>Comprensione orale <span>– Vero o falso?</span></h1>
+
+        <div class="instructions">
+          <p>Ascolta il dialogo e indica se le affermazioni sono vere o false.</p>
+          <p>Puoi ascoltare l’audio più volte.</p>
+          <p lang="zh-CN">听对话，判断下面的句子是正确还是错误。音频可以重复播放。</p>
+        </div>
+
+        <section class="audio-panel" aria-labelledby="audio-heading">
+          <div class="audio-heading-row">
+            <span class="audio-icon" aria-hidden="true">♪</span>
+            <div>
+              <h2 id="audio-heading">Dialogo completo</h2>
+              <p>Ascolta, poi rispondi alle 8 domande.</p>
+            </div>
+          </div>
+          <audio id="dialogue-audio" controls preload="metadata">
+            <source src="audio/dialogo-paola-elisa.mp3" type="audio/mpeg" />
+            Il tuo browser non supporta il lettore audio.
+          </audio>
+        </section>
+      </header>
+
+      <section class="quiz-section" aria-labelledby="quiz-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">8 AFFERMAZIONI</p>
+            <h2 id="quiz-heading">Scegli Vero o Falso</h2>
+          </div>
+          <p class="progress" id="progress" aria-live="polite">0 di 8 risposte</p>
+        </div>
+
+        <div id="questions" class="questions"></div>
+
+        <button id="check-button" class="primary-button" type="button">
+          Controlla le risposte
+        </button>
+      </section>
+
+      <section id="results" class="results" aria-labelledby="results-heading" hidden>
+        <div class="results-summary">
+          <p class="eyebrow">RISULTATO</p>
+          <h2 id="results-heading">Punteggio: <span id="score">0 / 8</span></h2>
+          <div class="summary-counts" aria-label="Riepilogo delle risposte">
+            <p><strong id="correct-count">0</strong><span>corrette</span></p>
+            <p><strong id="wrong-count">0</strong><span>errate</span></p>
+            <p><strong id="unanswered-count">0</strong><span>non risposte</span></p>
+          </div>
+        </div>
+
+        <div id="feedback" class="feedback-list"></div>
+
+        <button id="retry-button" class="secondary-button" type="button">Riprova</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
